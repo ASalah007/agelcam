@@ -1,0 +1,19 @@
+.sharedCamera {
+  &:hover {
+    cursor: pointer;
+    scale: 1.05;
+  }
+
+  &:active {
+    scale: 1;
+  }
+
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 10px;
+  padding-right: 30px;
+
+  img {
+    border-radius: 10px;
+  }
+}
