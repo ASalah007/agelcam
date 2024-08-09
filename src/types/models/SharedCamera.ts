@@ -1,3 +1,5 @@
+import { Stream } from "./Stream";
+
 export interface SharedCamera {
   id: number;
   name: string;
@@ -11,10 +13,7 @@ export interface SharedCamera {
   status: string;
   live_snapshot: string;
 
-  streams: {
-    format: string;
-    url: string;
-  }[];
+  streams: Stream[];
 
   applications: {
     code: string;

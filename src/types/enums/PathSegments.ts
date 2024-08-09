@@ -1,3 +1,3 @@
 export enum PathSegments {
-  SHARED_CAMERA_ID = ":sharedCameraId",
+  SHARED_CAMERA_ID = "sharedCameraId",
 }

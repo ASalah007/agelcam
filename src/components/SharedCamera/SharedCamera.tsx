@@ -1,4 +1,4 @@
-import { Stack, Typography } from "@mui/material";
+import { Paper, Stack, Typography } from "@mui/material";
 import { SharedCamera as ISharedCamera } from "../../types/models/SharedCamera";
 import { useEffect, useRef, useState } from "react";
 import classes from "./style.module.scss";
@@ -17,7 +17,7 @@ export const SharedCamera = (props: SharedCameraProps) => {
 
   const handleSharedCameraClick = () => {
     const sharedCameraPath = Paths.SHARED_CAMERA.replace(
-      PathSegments.SHARED_CAMERA_ID,
+      `:${PathSegments.SHARED_CAMERA_ID}`,
       props.sharedCamera.id.toString()
     );
     navigate(sharedCameraPath);
@@ -56,6 +56,8 @@ export const SharedCamera = (props: SharedCameraProps) => {
       onClick={handleSharedCameraClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      component={Paper}
+      sx={{ borderRadius: "20px" }}
       gap="12px"
     >
       <img

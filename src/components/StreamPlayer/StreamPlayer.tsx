@@ -1,10 +1,21 @@
 import ReactPlayer from "react-player";
+import { Stream } from "../../types/models/Stream";
+import React from "react";
+import { Typography } from "@mui/material";
 
 interface StreamPlayerProps {
-  streams: { url: string; format: string }[];
+  stream: Stream;
+  onPlay: () => void;
 }
 
 export const StreamPlayer = (props: StreamPlayerProps) => {
-  return <img src={props.streams[0].url} width="920px" />;
-  return <ReactPlayer url={props.streams[1].url} playing />;
+  if (props.stream.format === "mjpeg")
+    return <img onLoad={props.onPlay} src={props.stream.url} width="920px" />;
+
+  if (!ReactPlayer.canPlay(props.stream.url)) {
+    props.onPlay();
+    return <Typography>Format Not Supported</Typography>;
+  }
+
+  return <ReactPlayer url={props.stream.url} playing onPlay={props.onPlay} />;
 };
