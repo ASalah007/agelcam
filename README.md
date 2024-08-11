@@ -8,3 +8,10 @@ open the terminal and type these commands in order
 4. `npm run dev`
 
 now open your browser and go to `http://localhost:5173/`
+
+# Demo 
+
+
+https://github.com/user-attachments/assets/f1bd2590-4062-46f1-882a-47c6c7898b53
+
+
