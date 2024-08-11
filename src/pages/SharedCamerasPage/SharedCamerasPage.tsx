@@ -1,6 +1,6 @@
 import { LinearProgress, Pagination, Stack, Typography } from "@mui/material";
 import { SharedCamera } from "../../components/SharedCamera/SharedCamera";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { SharedCamera as ISharedCamera } from "../../types/models/SharedCamera";
 import { getSharedCameras } from "../../services/services";
 import { Paginated } from "../../types/models/Paginated";

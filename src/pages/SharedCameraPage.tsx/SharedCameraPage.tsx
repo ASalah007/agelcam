@@ -70,7 +70,11 @@ export const SharedCameraPage = () => {
             <MenuItem value={stream.format}>{stream.format}</MenuItem>
           ))}
         </Select>
-        <Button variant="contained" onClick={handleRecordingsClick}>
+        <Button
+          variant="contained"
+          onClick={handleRecordingsClick}
+          disabled={!sharedCamera?.has_recording}
+        >
           Recordings
         </Button>
       </Stack>
